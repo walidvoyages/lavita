@@ -1,0 +1,62 @@
+/* La Vita Spa 2026: responsive polish & the massage à domicile section */
+:root{--home-olive:#737d69;--home-ink:#302922;--home-oat:#eee7db}
+.nav-links{gap:clamp(10px,1.4vw,26px)}
+.nav-links a{font-size:10px;letter-spacing:.04em;white-space:nowrap;position:relative}
+.nav-links a:after{content:'';height:1px;width:0;position:absolute;left:0;bottom:-9px;background:currentColor;transition:width .25s}
+.nav-links a:hover:after,.nav-links a.active:after{width:100%}
+.header-inner{gap:clamp(12px,1.7vw,30px)}
+.btn{border-radius:99px;letter-spacing:.08em;box-shadow:0 7px 24px rgba(45,30,20,.07)}
+.header-cta,.menu-toggle{border-radius:99px}
+.btn:hover,.floating-book:hover{box-shadow:0 12px 32px rgba(45,30,20,.2)}
+.service-card,.aside-box,.feature-pill,.list-card,.related-link,.contact-cta{border-radius:14px;overflow:hidden}
+.service-card img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.service-card:hover img{transform:scale(1.045)}
+.inner-hero{background:radial-gradient(circle at 83% 15%,rgba(179,135,107,.27),transparent 45%),linear-gradient(145deg,#2b211e,#49362c)}
+.dom-teaser,.dom-zones{background:#f2eee6;overflow:hidden;position:relative}
+.dom-teaser:before{content:'';width:580px;height:580px;border:1px solid #dfd5c9;border-radius:50%;position:absolute;right:-420px;top:-210px;pointer-events:none}
+.dom-teaser-top{display:flex;align-items:end;justify-content:space-between;gap:36px;margin-bottom:36px;position:relative}
+.dom-teaser-top .section-title,.dom-zones .section-title{margin:15px 0 20px}
+.dom-teaser-top .section-lead{max-width:690px}
+.dom-city-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:30px 0 18px}
+.dom-city-card{position:relative;min-height:252px;display:flex;flex-direction:column;align-items:start;padding:28px 30px;background:linear-gradient(135deg,#fffcf7 25%,#e5dfd4 145%);border:1px solid rgba(60,45,37,.1);border-radius:18px;box-shadow:0 8px 26px #30251a0a;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.dom-city-card:after{content:'';position:absolute;right:-90px;top:18px;width:180px;height:180px;border:1px solid #b9ab9a77;box-shadow:0 0 0 35px #b7af9d16,0 0 0 74px #b7af9d10;border-radius:50%}
+.dom-city-card:hover{transform:translateY(-5px);box-shadow:0 20px 42px #30251a22}
+.dom-city-number{font:italic 20px var(--serif);color:#a38a75}
+.dom-city-label{font-size:10px;letter-spacing:.15em;font-weight:800;color:#877563;margin-top:23px}
+.dom-city-card strong{font-family:var(--serif);font-size:clamp(37px,4.4vw,59px);font-weight:400;line-height:1.2;margin-top:6px;position:relative;z-index:1}
+.dom-city-foot{margin-top:auto;padding-top:22px;display:flex;align-items:center;justify-content:space-between;width:100%;font-weight:700;font-size:12px;color:#665644}
+.dom-city-foot span{font-size:24px}
+.dom-disclaimer{font-size:12px;line-height:1.75;color:#706760;margin-top:17px}
+.dom-mini{background:#f0e8de;padding:49px 0}
+.dom-mini-flex{display:flex;justify-content:space-between;align-items:center;gap:30px}
+.dom-mini h2{font:400 clamp(25px,3vw,40px) var(--serif);margin-bottom:10px}
+.dom-mini p{font-size:14px;color:#6e6259}
+.dom-hub{background:#fcfaf6}
+.dom-hub-layout{display:grid;grid-template-columns:1.15fr .8fr;gap:clamp(30px,6vw,95px);align-items:center}
+.dom-hub .section-title{margin:24px 0}
+.dom-hub .section-lead{max-width:650px}
+.dom-steps{display:grid;max-width:630px;margin:35px 0}
+.dom-steps>div{display:flex;gap:21px;align-items:center;padding:17px 0;border-bottom:1px solid #e5dbce}
+.dom-steps b{font:italic 25px var(--serif);color:#a58a77}
+.dom-steps span{font-size:14px;font-weight:600;line-height:1.5}
+.dom-hub-image{position:relative;height:570px;overflow:hidden;border-radius:20px;box-shadow:0 30px 70px #49372e29}
+.dom-hub-image img{width:100%;height:100%;object-fit:cover}
+.dom-image-caption{position:absolute;left:20px;bottom:20px;background:#2b211eba;color:#fff;font-size:10px;letter-spacing:.13em;padding:14px 19px;border-radius:99px}
+.dom-info{background:#f4efe5;border-inline-start:4px solid #a58a77;padding:25px 28px;margin:35px 0;border-radius:0 16px 16px 0}
+.dom-info strong{font-size:15px}
+.dom-info p{margin:8px 0 0}
+.dom-article h2{font-size:clamp(29px,3.3vw,45px)}
+.dom-aside{top:120px}
+.dom-other{background:#f2eee6}
+.dom-other .section-title{margin:18px 0 14px}
+.dom-other .dom-city-grid{grid-template-columns:repeat(2,minmax(0,1fr));margin:35px 0}
+.dom-faqwrap{max-width:850px}
+#book-zone-wrap[hidden]{display:none!important}
+[dir=rtl] .dom-city-card:after{right:auto;left:-90px}
+[dir=rtl] .dom-city-card strong,[dir=rtl] .dom-mini h2,[dir=rtl] .dom-steps b{font-family:'Tajawal',sans-serif}
+[dir=rtl] .dom-info{border-radius:16px 0 0 16px}
+[dir=rtl] .dom-image-caption{left:auto;right:20px}
+@media(max-width:1080px){.dom-hub-layout{grid-template-columns:1fr 1fr}.dom-hub-image{height:460px}}
+@media(max-width:900px){.dom-teaser-top{align-items:start;flex-direction:column}.dom-hub-layout{grid-template-columns:1fr}.dom-hub-image{height:340px;max-width:660px}.dom-city-card{padding:22px;min-height:225px}.dom-city-grid{gap:12px}}
+@media(max-width:650px){.dom-city-grid,.dom-other .dom-city-grid{grid-template-columns:1fr}.dom-city-card{min-height:177px}.dom-city-label{margin-top:9px}.dom-city-card strong{font-size:39px}.dom-city-foot{padding-top:10px}.dom-teaser-top{gap:20px;margin-bottom:20px}.dom-mini-flex{flex-direction:column;align-items:start}.dom-hub-image{height:295px}.dom-hub-layout{gap:30px}.dom-teaser .section-title{font-size:43px}.inner-title{overflow-wrap:break-word}}
+@media(prefers-reduced-motion:reduce){.dom-city-card,.service-card img{transition:none}}

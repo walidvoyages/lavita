@@ -4,10 +4,13 @@ Site vitrine statique bilingue pour La Vita Spa, Sahloul, Sousse.
 
 ## Contenu
 
-- 21 routes HTML indexables en français et en arabe, dont 3 articles en français.
+- **29 pages HTML** en français et en arabe, dont 3 articles de conseils en français.
+- **8 nouvelles pages massage à domicile** : une page générale FR/AR et des pages dédiées à **Sousse, Tunis et Nabeul** en FR/AR.
+- Section massage à domicile sur les accueils FR/AR, navigation enrichie et liens internes entre les villes.
 - Pages services : massages, hammam individuel, soins du visage, rituel hammam + massage.
-- Affichage responsive, animations légères et formulaire de demande de rendez-vous qui ouvre WhatsApp.
-- Balises title/description, données structurées Schema.org, hreflang, Open Graph et robots.txt.
+- Styles CSS améliorés et responsive (`assets/css/enhancements.css`), animations légères, formulaire de demande de rendez-vous ouvrant WhatsApp.
+- Le formulaire permet de renseigner la **ville et le quartier** pour les demandes à domicile.
+- Balises title/description uniques, données structurées Schema.org, balises hreflang et canonical après configuration du domaine, Open Graph et robots.txt.
 - Images WebP optimisées.
 
 ## Mise en ligne
@@ -24,7 +27,11 @@ Le site est statique : pas besoin de Node.js ni d'une base de données. Pas de p
 4. Configurez Google Search Console, vérifiez la propriété et soumettez `/sitemap.xml`.
 5. Vérifiez l'exactitude des coordonnées, du nom commercial et des services auprès de l'établissement. Activez / mettez à jour Google Business Profile.
 
-Sans domaine configuré, le site fonctionne, mais le sitemap et les canonicals absolus sont laissés inactifs volontairement pour éviter de soumettre des URLs incorrectes.
+Sans domaine configuré, le site fonctionne, mais le sitemap, les canonicals et les hreflang absolus restent inactifs volontairement pour éviter de soumettre des URLs incorrectes. **Il faut configurer le domaine avant la publication SEO finale**.
+
+## Important : massage à domicile
+
+Les pages de Sousse, Tunis et Nabeul permettent au client de **demander** une intervention à domicile. Elles ne déclarent **aucune antenne à Tunis ou Nabeul** et ne garantissent pas une zone desservie ni un déplacement. Toute prestation à domicile doit être validée par La Vita Spa (disponibilité, tarif, frais de transport, professionnel et rendez-vous). **Vérifiez auprès de La Vita Spa que la prestation à domicile peut réellement être proposée avant de publier ces pages.**
 
 ## Coordonnées / réservations
 
@@ -37,7 +44,7 @@ Ces données proviennent des supports fournis et doivent être confirmées avant
 
 ## Modification du contenu
 
-Les pages HTML sont produites par `build.py`. Pour changer le contenu global, modifiez `build.py` puis lancez `python3 build.py`. CSS : `assets/css/style.css`. JS : `assets/js/app.js`. Images : `assets/img/`.
+Les pages HTML sont produites par `build.py`. Pour changer le contenu global, modifiez `build.py` puis lancez `python3 build.py`. CSS : `assets/css/style.css` et `assets/css/enhancements.css`. JS : `assets/js/app.js`. Images : `assets/img/`.
 
 ## Test local
 
